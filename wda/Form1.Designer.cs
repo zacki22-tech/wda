@@ -53,13 +53,15 @@
             this.lbladdress = new System.Windows.Forms.Label();
             this.txtemail = new System.Windows.Forms.TextBox();
             this.txtaddress = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtbirth = new System.Windows.Forms.DateTimePicker();
             this.txtage = new System.Windows.Forms.TextBox();
             this.txtpassword = new System.Windows.Forms.TextBox();
             this.txtusername = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtprofile = new System.Windows.Forms.TextBox();
             this.btnbrowse = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbmcourse = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblname
@@ -219,7 +221,7 @@
             this.btndisplay.TabIndex = 18;
             this.btndisplay.Text = "DISPLAY";
             this.btndisplay.UseVisualStyleBackColor = true;
-            this.btndisplay.Click += new System.EventHandler(this.btndisplay_Click);
+           
             // 
             // btnupdate
             // 
@@ -233,7 +235,7 @@
             this.btnupdate.Text = "Update";
             this.btnupdate.UseVisualStyleBackColor = true;
             this.btnupdate.Visible = false;
-            this.btnupdate.Click += new System.EventHandler(this.btnupdate_Click);
+         
             // 
             // lblid
             // 
@@ -322,13 +324,13 @@
             this.txtaddress.Size = new System.Drawing.Size(197, 24);
             this.txtaddress.TabIndex = 28;
             // 
-            // dateTimePicker1
+            // dtbirth
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(157, 342);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(197, 20);
-            this.dateTimePicker1.TabIndex = 29;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.dtbirth.Location = new System.Drawing.Point(157, 342);
+            this.dtbirth.Name = "dtbirth";
+            this.dtbirth.Size = new System.Drawing.Size(197, 20);
+            this.dtbirth.TabIndex = 29;
+            
             // 
             // txtage
             // 
@@ -382,6 +384,30 @@
             this.btnbrowse.TabIndex = 35;
             this.btnbrowse.Text = "BROWSE";
             this.btnbrowse.UseVisualStyleBackColor = true;
+           
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(45, 427);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 20);
+            this.label2.TabIndex = 36;
+            this.label2.Text = "COURSE:";
+            // 
+            // cbmcourse
+            // 
+            this.cbmcourse.FormattingEnabled = true;
+            this.cbmcourse.Items.AddRange(new object[] {
+            "BSIT",
+            "BSED",
+            "BSBA",
+            "BSTM"});
+            this.cbmcourse.Location = new System.Drawing.Point(157, 429);
+            this.cbmcourse.Name = "cbmcourse";
+            this.cbmcourse.Size = new System.Drawing.Size(197, 21);
+            this.cbmcourse.TabIndex = 37;
             // 
             // Form1
             // 
@@ -389,13 +415,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.ClientSize = new System.Drawing.Size(867, 553);
+            this.Controls.Add(this.cbmcourse);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnbrowse);
             this.Controls.Add(this.txtprofile);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtusername);
             this.Controls.Add(this.txtpassword);
             this.Controls.Add(this.txtage);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtbirth);
             this.Controls.Add(this.txtaddress);
             this.Controls.Add(this.txtemail);
             this.Controls.Add(this.lbladdress);
@@ -421,6 +449,7 @@
             this.Controls.Add(this.lblhobbies);
             this.Controls.Add(this.lblgender);
             this.Controls.Add(this.lblname);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "Profile";
             this.ResumeLayout(false);
@@ -455,13 +484,15 @@
         private System.Windows.Forms.Label lbladdress;
         public System.Windows.Forms.TextBox txtemail;
         public System.Windows.Forms.TextBox txtaddress;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtbirth;
         public System.Windows.Forms.TextBox txtage;
         public System.Windows.Forms.TextBox txtpassword;
         public System.Windows.Forms.TextBox txtusername;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox txtprofile;
         private System.Windows.Forms.Button btnbrowse;
+        private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.ComboBox cbmcourse;
     }
 }
 

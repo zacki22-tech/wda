@@ -23,7 +23,7 @@ namespace wda
             //f2.Insert(name,gender,hobbies,color,saying);
             Workbook book = new Workbook();
 
-            book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\wda\wda\Book1.xlsx");
+            book.LoadFromFile(@"C:\Users\ACT-STUDENT\source\repos\wda\wda\Book1.xlsx");
 
             Worksheet sheet = book.Worksheets[0];
 
@@ -58,11 +58,7 @@ namespace wda
             }
         }
 
-        private void btnReset_Click(object sender, EventArgs e)
-        {
-            txtusername.Clear();
-            txtpassword.Clear();
-        }
+     
 
         private void chkshowpass_CheckedChanged(object sender, EventArgs e)
         {
@@ -74,6 +70,12 @@ namespace wda
             {
                 txtpassword.UseSystemPasswordChar = false;
             }
+        }
+
+        private void btnreset_Click_1(object sender, EventArgs e)
+        {
+            txtusername.Clear();
+            txtpassword.Clear();
         }
     }
     

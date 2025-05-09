@@ -43,7 +43,9 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,6 +61,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(256, 59);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(167, 137);
@@ -130,6 +133,7 @@
             this.lbldashboard.Size = new System.Drawing.Size(137, 24);
             this.lbldashboard.TabIndex = 3;
             this.lbldashboard.Text = "DASHBOARD";
+            this.lbldashboard.Click += new System.EventHandler(this.lbldashboard_Click);
             // 
             // lbldate
             // 
@@ -193,7 +197,17 @@
             this.panel7.Size = new System.Drawing.Size(167, 137);
             this.panel7.TabIndex = 2;
             // 
-            // Form3
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(28, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ACTIVE STUDENTS";
+            // 
+            // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -206,9 +220,12 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Name = "Form3";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "Dashboard";
             this.Text = "Form3";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -232,5 +249,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label1;
     }
 }

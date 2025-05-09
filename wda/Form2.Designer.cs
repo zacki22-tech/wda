@@ -101,6 +101,7 @@
             this.Controls.Add(this.btndelete);
             this.Controls.Add(this.txtsearch);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form2";
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

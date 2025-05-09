@@ -17,6 +17,9 @@ namespace wda
             InitializeComponent();
         }
 
-       
+        private void lbldashboard_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
