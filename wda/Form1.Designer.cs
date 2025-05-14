@@ -380,7 +380,7 @@
             this.btnbrowse.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnbrowse.Location = new System.Drawing.Point(755, 147);
             this.btnbrowse.Name = "btnbrowse";
-            this.btnbrowse.Size = new System.Drawing.Size(112, 26);
+            this.btnbrowse.Size = new System.Drawing.Size(100, 26);
             this.btnbrowse.TabIndex = 35;
             this.btnbrowse.Text = "BROWSE";
             this.btnbrowse.UseVisualStyleBackColor = true;

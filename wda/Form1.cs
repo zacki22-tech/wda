@@ -147,7 +147,7 @@ namespace wda
 
             // Insert to form2 if needed
             Form2 form2 = new Form2(currentUserName);
-            form2.insertDate(name, gender, hobbies, favcolor, address, email, birthdate, age, course, saying, username, password, "1", profilePicture);
+            form2.insertate(name, gender, hobbies, favcolor, address, email, birthdate, age, course, saying, username, password, "1", profilePicture);
 
             // Save to Excel
             Workbook book = new Workbook();
@@ -295,6 +295,8 @@ namespace wda
             string profilePath = txtprofile.Text.Trim();
         }
 
-     
+       
+
+       
     }
 }

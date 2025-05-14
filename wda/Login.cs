@@ -33,16 +33,35 @@ namespace wda
 
             for (int i = 2; i < row; i++)
             {
-                if (sheet.Range[2, 9].Value == txtusername.Text && sheet.Range[2, 10].Value == txtpassword.Text)
+                string storedUsername = sheet.Range[i, 11].Value?.Trim();
+                string storedPassword = sheet.Range[i, 12].Value?.Trim();
+                string accountStatus = sheet.Range[i, 13].Value?.Trim();
+
+                if (storedUsername == txtusername.Text.Trim() && storedPassword == txtpassword.Text.Trim())
                 {
-                    log = true;//success
+                    //validate if account is inactive
+                    if (accountStatus == "0")
+                    {
+                        MessageBox.Show("Your account is inactive. Login Failed", "Account Inactive", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        log = true;
+                        txtusername.Clear(); txtpassword.Clear();
+                        break;
+                    }
+
+                    string profilePath = sheet.Range[i, 14].Text;
+                    string name = storedUsername;
+
+                    MessageBox.Show("Login successful", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
+
+                    log.insertLogs(storedUsername, "Successfully logged in!");
+
+                    Dashboard dashboard = new Dashboard(name, profilePath);
+                    dashboard.ShowDialog();
+                    loginSuccess = true;
+                    this.Close();
                     break;
                 }
-                else
-                {
-                    log = false;//invalid
-                }
-            }
 
             if (log == true)
             {
